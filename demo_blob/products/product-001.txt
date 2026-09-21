@@ -1,0 +1,7 @@
+Northstar PX-200 Pressure Sensor
+Manufacturer: Northstar Industrial
+Category: Pressure sensing
+The PX-200 is a compact pressure sensor for plant utilities and test benches. It provides stable readings in demanding maintenance environments.
+Features: stainless housing; 4-20 mA output; field calibration button
+Specifications: Range 0-16 bar; Accuracy +/-0.25%; Protection IP67
+Tags: pressure, instrumentation, maintenance

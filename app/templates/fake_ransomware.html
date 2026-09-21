@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Critical Security Incident</title>
+  <link rel="stylesheet" href="/static/css/ransomware.css">
+</head>
+<body>
+  <header><span>⚠ CRITICAL SECURITY INCIDENT</span><strong id="incident-state">AWAITING EXECUTION</strong><div class="window-actions"><button id="fullscreen-window">FULL SCREEN</button><button id="close-window">× CLOSE</button></div></header>
+  <main class="incident-layout">
+    <section class="threat-copy">
+      <div class="lock">!</div>
+      <p class="simulation">RECOVERY REQUIRED</p>
+      <h1>YOUR DATA HAS<br>BEEN ENCRYPTED</h1>
+      <p class="demand">Contact your recovery administrator to restore access.</p>
+      <code>RECOVERY-KEY-REQUIRED</code>
+      <div class="timer"><span>TIME REMAINING</span><strong id="countdown">23:59:59</strong></div>
+      <button id="restore-system">RESTORE SYSTEM</button>
+    </section>
+    <aside class="execution-console">
+      <div class="console-title"><span>ROOT EXECUTION CONSOLE</span><i></i></div>
+      <div id="console-output" aria-live="polite"></div>
+    </aside>
+  </main>
+  <footer>INCIDENT RESPONSE REQUIRED <span>HOST ACCESS: LOCKED</span></footer>
+  <script src="/static/js/recovery.js"></script>
+</body>
+</html>

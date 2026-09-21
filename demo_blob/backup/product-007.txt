@@ -1,0 +1,9 @@
+Northstar Industrial ScanMate W7
+Manufacturer: Northstar Industrial
+Category: Warehouse barcode scanner
+
+ScanMate W7 is a rugged handheld scanner for receiving, picking, and cycle-count workflows in warehouses.
+
+Features: wide-angle imager; glove-friendly trigger; drop-resistant enclosure
+Specs: Scan types=1D and 2D; Battery=8 hours; Protection=IP65
+Tags: warehouse, barcode, logistics

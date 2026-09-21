@@ -1,0 +1,9 @@
+Meridian Controls EtherRail 24
+Manufacturer: Meridian Controls
+Category: Industrial Ethernet switch
+
+EtherRail 24 is an unmanaged switch for small automation cells, with a hardened enclosure and visible link status.
+
+Features: 24 copper ports; DIN rail clip; redundant power input
+Technical specs: Ports=24; Speed=1 GbE; Temperature=-40 to 75 C
+Tags: Ethernet, switch, automation

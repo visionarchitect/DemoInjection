@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Northstar Industrial Catalogue</title>
+  <link rel="stylesheet" href="/static/css/catalogue.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-mark">N</span><span><small>AI-ENRICHED PRODUCT FEED</small><strong>Northstar Industrial</strong></span></a>
+    <label class="search"><span class="sr-only">Search catalogue</span><b>⌕</b><input id="search" type="search" placeholder="Search products, manufacturers, or tags"></label>
+    <div class="status-card"><span class="status-dot"></span><div><strong id="product-count">{{ products|length }} products published</strong><small id="status-copy">Supplier feed connected</small></div></div>
+    <nav><a href="/monitor">Agent Monitor</a><a class="button dark" href="/controls">Controls</a></nav>
+  </header>
+  <aside class="feed-banner"><span>✦</span><strong>Catalogue content generated from supplier product feeds.</strong><span>Validated structure · Live inventory</span></aside>
+  <main>
+    <section class="storebar">
+      <div class="chips" id="category-chips" role="tablist" aria-label="Filter by category"></div>
+      <p id="result-count">{{ products|length }} results</p>
+    </section>
+    <section id="product-grid" class="product-grid" aria-live="polite"></section>
+    <div id="empty-state" class="empty" hidden><span>◇</span><h2>No products yet</h2><p>Run the catalogue agent from Operations Controls to enrich the supplier feed.</p><a class="button dark" href="/controls">Open controls</a></div>
+  </main>
+  <footer><strong>Northstar Industrial</strong><span>Internal product intelligence</span><span>Feed status: operational</span></footer>
+  <dialog id="product-dialog"><button class="close" aria-label="Close">×</button><div id="dialog-content"></div></dialog>
+  <script>window.PRODUCTS={{ products|tojson }};</script><script src="/static/js/catalogue.js"></script>
+</body></html>

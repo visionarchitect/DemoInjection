@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Agent Activity Monitor</title><link rel="stylesheet" href="/static/css/monitor.css"></head>
+<body>
+  <header class="monitor-head">
+    <div><a href="/controls">NORTHSTAR / AI OPERATIONS</a><h1>Agent Activity Monitor</h1></div>
+    <div class="head-actions"><span class="live"><i></i> LIVE</span><button id="open-payload" class="incident-link" hidden>Open incident ↗</button><a href="/">Catalogue ↗</a><a href="/controls">Controls</a></div>
+  </header>
+  <main class="monitor-layout">
+    <section class="console">
+      <div class="console-tools">
+        <div class="event-filters"><label class="event-search"><span>Search events</span><input id="event-search" type="search" placeholder="Search events…" autocomplete="off" spellcheck="false"></label><select id="severity-filter" aria-label="Filter by severity"><option value="">All severities</option><option>info</option><option>model</option><option>tool</option><option>success</option><option>warning</option><option>blocked</option><option>security</option></select><select id="type-filter" aria-label="Filter by event type"><option value="">All event types</option></select><output id="event-count" aria-live="polite">0 events</output></div>
+        <div><label class="toggle"><input id="autoscroll" type="checkbox" checked><span></span> Auto-scroll</label><button id="pause">Pause stream</button><button id="clear">Clear view</button></div>
+      </div>
+      <div class="column-head"><span>TIME</span><span>EVENT / SOURCE</span><span>ACTIVITY</span><span>TRUST / RESULT</span></div>
+      <div id="event-list" class="event-list"><div class="waiting"><i></i>Waiting for agent activity…</div></div>
+    </section>
+    <aside>
+      <section class="state-panel"><div class="panel-title"><span>CURRENT AGENT STATE</span><i id="state-pulse"></i></div>
+        <dl><div><dt>Task</dt><dd>Catalogue generation</dd></div><div><dt>Current source</dt><dd id="current-source">—</dd></div><div><dt>Source trust</dt><dd id="source-trust" class="trust">NO SOURCE</dd></div><div><dt>Security mode</dt><dd id="security-mode">—</dd></div><div><dt>Last requested tool</dt><dd id="last-tool">—</dd></div></dl>
+      </section>
+      <section class="tool-panel"><div class="panel-title"><span>TOOL EXECUTION</span><span id="tool-count">0</span></div><div id="tool-executions" class="tool-executions"><p class="tool-empty">No tool activity</p></div></section>
+      <section id="drift-panel" class="drift-panel" hidden><p>⚠ PLAN DRIFT DETECTED</p><h2>Instruction provenance mismatch</h2><dl><dt>Requested action</dt><dd id="drift-action">—</dd><dt>Immediate instruction source</dt><dd id="drift-source">—</dd><dt>Source trust</dt><dd>EXTERNAL / UNTRUSTED</dd><dt>Original business goal</dt><dd>Generate product catalogue entries</dd></dl></section>
+      <section class="architecture"><div class="panel-title">DATA & CAPABILITY FLOW</div><div class="external">EXTERNAL / UNTRUSTED<br><strong>Product feed</strong></div><b>↓ read_product_blob()</b><div class="agent-node">Catalogue Agent</div><div class="fork"><span>↓ structured product</span><span>↘ execute helper</span></div><div class="destinations"><em>Catalogue</em><em class="danger">Policy gateway</em></div></section>
+    </aside>
+  </main>
+  <script src="/static/js/monitor.js"></script>
+</body></html>

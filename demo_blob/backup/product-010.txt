@@ -1,0 +1,9 @@
+Aperture Systems FlowTrack F-12
+Manufacturer: Aperture Systems
+Category: Flow meter
+
+FlowTrack F-12 measures clean liquid flow in utility and process loops. Its local buttons support commissioning without a laptop.
+
+Features: clamp-on installation; configurable units; pulse output
+Specs: Pipe size=25-150 mm; Accuracy=1%; Display=backlit LCD
+Tags: flow, utility, process

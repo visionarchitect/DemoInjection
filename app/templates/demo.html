@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Poisoned at the Source — Operations Controls</title><link rel="stylesheet" href="/static/css/monitor.css"></head>
+<body class="demo-body">
+  <header class="monitor-head"><div><a href="/">NORTHSTAR / APPLICATION SECURITY</a><h1>Poisoned at the Source</h1></div><div class="head-actions"><a href="/">Catalogue ↗</a><a href="/monitor">Monitor ↗</a></div></header>
+  <main class="demo-grid">
+    <section class="control-stage"><p class="overline">AI OPERATIONS CONTROL</p><h2>Indirect prompt injection,<br>made visible.</h2><p class="stage-copy">Control the feed, follow the agent's reasoning, and compare vulnerable authorization with a deterministic capability boundary.</p>
+      <div id="notice" class="notice">Ready. Select a scene and run the agent.</div>
+      <div class="scene-picker"><button class="scene active" data-scope="normal"><b>01</b><span><strong>Load Normal Products</strong><small>Process trusted-looking supplier records</small></span></button><button class="scene" data-scope="poisoned"><b>02</b><span><strong>Load Poisoned Product</strong><small>Use the same NX-440 source in both modes</small></span></button><button class="scene" data-scope="all"><b>∞</b><span><strong>Load All Products</strong><small>Run normal and poisoned sources together</small></span></button></div>
+      <div class="run-actions"><button id="run" class="primary">▶ Run agent</button><button id="stop" class="danger-button">■ Stop agent</button><button id="reset">↺ Reset to initial state</button><button id="open-incident" hidden>Open incident window ↗</button></div>
+    </section>
+    <aside class="configuration">
+      <section><div class="panel-title">SECURITY MODE</div><label class="mode-card"><input type="radio" name="mode" value="vulnerable"><span><b>Vulnerable</b><small>Agent can reach the over-privileged execution capability</small></span></label><label class="mode-card"><input type="radio" name="mode" value="protected"><span><b>Protected</b><small>Task-scoped application policy authorizes tools</small></span></label></section>
+      <section><div class="panel-title">PRODUCT FEED</div><label class="mode-card"><input type="radio" name="storage" value="local"><span><b>Local product feed</b><small>Offline Azure Blob emulator</small></span></label><label class="mode-card"><input type="radio" name="storage" value="azure"><span><b>Azure Blob</b><small>Scoped read-only container access</small></span></label></section>
+      <section class="config-readout"><div class="panel-title">CURRENT CONFIGURATION</div><dl><div><dt>Model</dt><dd id="cfg-model">—</dd></div><div><dt>Storage</dt><dd id="cfg-storage">—</dd></div><div><dt>Security</dt><dd id="cfg-security">—</dd></div><div><dt>Products</dt><dd id="cfg-products">—</dd></div><div><dt>API key</dt><dd id="cfg-key">—</dd></div></dl></section>
+    </aside>
+    <section class="architecture-wide"><div><p class="overline">LIVE ARCHITECTURE</p><h3>The model proposes.<br>The application authorizes.</h3></div><div class="flow"><div class="boundary"><small>TRUST BOUNDARY</small><b>External Product Feed</b></div><i>→</i><div><small>AGENTIC INTERPRETATION</small><b>Catalogue Agent</b><span>read_product_blob()</span><span class="warn">download_and_execute_script()</span></div><i>→</i><div><small>DETERMINISTIC</small><b>Policy Gateway</b></div><i>→</i><div><small>OUTPUT</small><b>Product Catalogue</b></div></div></section>
+  </main><script src="/static/js/demo.js"></script>
+</body></html>

@@ -1,0 +1,9 @@
+BluePeak Instruments VibraSense V2
+Manufacturer: BluePeak Instruments
+Category: Vibration sensing
+
+VibraSense V2 is a battery-powered vibration sensor for rotating equipment. It helps maintenance teams compare machine health readings over time.
+
+Features: tri-axis accelerometer; magnetic mount; scheduled sampling
+Technical specifications: Battery life=24 months typical; Radio=LoRa demo band; Frequency=10-1000 Hz
+Tags: vibration, predictive maintenance, wireless

@@ -1,0 +1,9 @@
+Contoso Dynamics UPS Link UL-1
+Manufacturer: Contoso Dynamics
+Category: UPS monitoring module
+
+UPS Link UL-1 adds network status and battery telemetry to compatible facility UPS cabinets.
+
+Features: dry-contact input; battery runtime estimates; SNMP-style status export
+Specs: Inputs=8; Power=12 VDC; Mount=DIN rail
+Tags: UPS, power, facilities
